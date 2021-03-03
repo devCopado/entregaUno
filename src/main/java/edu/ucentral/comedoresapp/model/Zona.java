@@ -9,9 +9,10 @@ package edu.ucentral.comedoresapp.model;
  *
  * @author CORE I9 RX 5700XT
  */
-public class Comedor {
+public class Zona {
     private int Id;
-    private String Nombre_comedor;
-    private int capacidad_comedor;
-    Zona zona =new Zona();
+    private String nombreZona;
+    private String ciudad;
+    private String direccionZona;
+    
 }

@@ -9,9 +9,8 @@ package edu.ucentral.comedoresapp.model;
  *
  * @author CORE I9 RX 5700XT
  */
-public class Comedor {
+public class HorarioxComedor {
     private int Id;
-    private String Nombre_comedor;
-    private int capacidad_comedor;
-    Zona zona =new Zona();
+    Horario horario = new Horario();
+    Comedor comedor = new Comedor();
 }

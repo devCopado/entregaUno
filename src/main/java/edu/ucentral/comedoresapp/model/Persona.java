@@ -18,6 +18,7 @@ public class Persona {
     private String direccion;
     private String movil;
     private int numeroSisben;
+    Comedor comedor = new Comedor();
 
     public Persona() {
     }
@@ -88,10 +89,20 @@ public class Persona {
         this.numeroSisben = numeroSisben;
     }
 
+    public Comedor getComedor() {
+        return comedor;
+    }
+
+    public void setComedor(Comedor comedor) {
+        this.comedor = comedor;
+    }
+
     @Override
     public String toString() {
-        return "Persona{" + "Id=" + Id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", movil=" + movil + ", numeroSisben=" + numeroSisben + '}';
+        return "Persona{" + "Id=" + Id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", movil=" + movil + ", numeroSisben=" + numeroSisben + ", comedor=" + comedor + '}';
     }
+
+  
     
     
 }
