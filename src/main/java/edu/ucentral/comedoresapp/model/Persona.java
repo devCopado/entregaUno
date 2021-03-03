@@ -19,6 +19,7 @@ public class Persona {
     private String movil;
     private int numeroSisben;
     Comedor comedor = new Comedor();
+    Zona zona = new Zona();
 
     public Persona() {
     }
@@ -97,10 +98,21 @@ public class Persona {
         this.comedor = comedor;
     }
 
+    public Zona getZona() {
+        return zona;
+    }
+
+    public void setZona(Zona zona) {
+        this.zona = zona;
+    }
+
     @Override
     public String toString() {
-        return "Persona{" + "Id=" + Id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", movil=" + movil + ", numeroSisben=" + numeroSisben + ", comedor=" + comedor + '}';
+        return "Persona{" + "Id=" + Id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", movil=" + movil + ", numeroSisben=" + numeroSisben + ", comedor=" + comedor + ", zona=" + zona + '}';
     }
+    
+
+    
 
   
     

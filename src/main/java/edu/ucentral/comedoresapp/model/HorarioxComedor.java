@@ -13,4 +13,5 @@ public class HorarioxComedor {
     private int Id;
     Horario horario = new Horario();
     Comedor comedor = new Comedor();
+    Persona persona = new Persona();
 }
