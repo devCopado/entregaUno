@@ -18,7 +18,7 @@
             <div class="card-body">
                 <h5 class="card-title">Por favor seleccione la accion a realizar</h5>
                 <form action="PersonaController" method="GET">
-                    <input class="btn btn-primary" type="submit" name="accion" value="registrar Persona">
+                    <input class="btn btn-primary" type="submit" name="accion" value="Listar Comedores">
                  </form>
             </div>
             <div class="card-footer text-muted">
