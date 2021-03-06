@@ -13,9 +13,5 @@ import java.sql.Date;
  */
 public class Horario {
     private int Id;
-    private Date horaInicio;
-    private Date horaFin;
-    private Date fechaInicio;
-    private Date fechaFin;
-    
+    private String horaInicio;
 }

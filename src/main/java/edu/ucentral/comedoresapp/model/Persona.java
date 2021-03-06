@@ -18,6 +18,10 @@ public class Persona {
     private String direccion;
     private String movil;
     private int numeroSisben;
+    private Boolean personaEnDiscapacidad;
+    private Boolean victimaConflicto;
+    private Boolean habitanteDeCalle;
+    
     Comedor comedor = new Comedor();
     Zona zona = new Zona();
 
@@ -106,10 +110,36 @@ public class Persona {
         this.zona = zona;
     }
 
+    public Boolean getPersonaEnDiscapacidad() {
+        return personaEnDiscapacidad;
+    }
+
+    public void setPersonaEnDiscapacidad(Boolean personaEnDiscapacidad) {
+        this.personaEnDiscapacidad = personaEnDiscapacidad;
+    }
+
+    public Boolean getVictimaConflicto() {
+        return victimaConflicto;
+    }
+
+    public void setVictimaConflicto(Boolean victimaConflicto) {
+        this.victimaConflicto = victimaConflicto;
+    }
+
+    public Boolean getHabitanteDeCalle() {
+        return habitanteDeCalle;
+    }
+
+    public void setHabitanteDeCalle(Boolean habitanteDeCalle) {
+        this.habitanteDeCalle = habitanteDeCalle;
+    }
+
     @Override
     public String toString() {
-        return "Persona{" + "Id=" + Id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", movil=" + movil + ", numeroSisben=" + numeroSisben + ", comedor=" + comedor + ", zona=" + zona + '}';
+        return "Persona{" + "Id=" + Id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", movil=" + movil + ", numeroSisben=" + numeroSisben + ", comedor=" + comedor + ", zona=" + zona + ", personaEnDiscapacidad=" + personaEnDiscapacidad + ", victimaConflicto=" + victimaConflicto + ", habitanteDeCalle=" + habitanteDeCalle + '}';
     }
+    
+    
     
 
     
