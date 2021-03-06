@@ -19,10 +19,10 @@ import java.sql.SQLException;
  */
 public class Conexion {
     private static String JDBC_DRIVER = "org.postgresql.Driver";//"org.apache.derby.jdbc.ClientDriver"; //"org.postgresql.Driver";  //"com.mysql.jdbc.Driver";
-    private static String DB = "estudiantes_DB";
+    private static String DB = "comedoresDB";
     private static String JDBC_URL = "jdbc:postgresql://localhost:5432/"+ DB;//"jdbc:derby://localhost:1527/" +DB ;//"jdbc:postgresql://localhost:5432/"+ DB;  //"jdbc:mysql://localhost:3306/+DB;
     private static String JDBC_USER = "postgres";  //"root";
-    private static String JDBC_PASS = ""; 
+    private static String JDBC_PASS = "Andes2021"; 
     private static Driver driver;
     
     public static synchronized Connection getConnection() throws SQLException, NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{

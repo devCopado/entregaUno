@@ -14,4 +14,50 @@ public class HorarioxComedor {
     Horario horario = new Horario();
     Comedor comedor = new Comedor();
     Persona persona = new Persona();
+
+    public HorarioxComedor() {
+    }
+
+    public HorarioxComedor(int Id) {
+        this.Id = Id;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int Id) {
+        this.Id = Id;
+    }
+
+    public Horario getHorario() {
+        return horario;
+    }
+
+    public void setHorario(Horario horario) {
+        this.horario = horario;
+    }
+
+    public Comedor getComedor() {
+        return comedor;
+    }
+
+    public void setComedor(Comedor comedor) {
+        this.comedor = comedor;
+    }
+
+    public Persona getPersona() {
+        return persona;
+    }
+
+    public void setPersona(Persona persona) {
+        this.persona = persona;
+    }
+
+    @Override
+    public String toString() {
+        return "HorarioxComedor{" + "Id=" + Id + ", horario=" + horario + ", comedor=" + comedor + ", persona=" + persona + '}';
+    }
+    
+    
 }
