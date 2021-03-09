@@ -16,9 +16,10 @@
                 Sistema de comedores Comunitarios
             </div>
             <div class="card-body">
-                <h5 class="card-title">Por favor seleccione la accion a realizar</h5>
+                <h5 class="card-title">Por favor seleccione la acción a realizar</h5>
                 <form action="PersonaController" method="GET">
-                    <input class="btn btn-primary" type="submit" name="accion" value="Listar Comedores">
+                    <input class="btn btn-primary" type="submit" name="accion" value="ver personas por comedor">
+                    <input class="btn btn-primary" type="submit" name="accion" value="Registrar">
                  </form>
             </div>
             <div class="card-footer text-muted">

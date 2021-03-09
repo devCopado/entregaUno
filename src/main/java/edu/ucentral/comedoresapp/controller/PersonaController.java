@@ -22,9 +22,9 @@ public class PersonaController extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getParameter("accion") != null) {
              String accion = req.getParameter("accion");
-             if(accion.equals("Listar Comedores")){
+             if(accion.equals("Registrar")){
                  try {
-                     listarComedores(req,resp);
+                     registrarPersona(req,resp);
                  } catch (SQLException ex) {
                      Logger.getLogger(PersonaController.class.getName()).log(Level.SEVERE, null, ex);
                  } catch (NoSuchMethodException ex) {
@@ -52,10 +52,9 @@ public class PersonaController extends HttpServlet{
         return super.getServletInfo(); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void listarComedores(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException, NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-        List<Comedor> comedores = ComedorJDBC.instancia().listarComedores();
-        req.setAttribute("comedores", comedores);
-        req.getRequestDispatcher("WEB-INF/comedores/listaComedores.jsp").forward(req, resp);
+    private void registrarPersona(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException, NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        
+        req.getRequestDispatcher("WEB-INF/comedores/registroPersona.jsp").forward(req, resp);
     }
     
     

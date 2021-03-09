@@ -12,15 +12,15 @@ package edu.ucentral.comedoresapp.model;
 public class Persona {
     
     private int Id;
-    private String cedula;
+    private int cedula;
     private String nombre;
     private String apellido;
     private String direccion;
     private String movil;
     private int numeroSisben;
-    private Boolean personaEnDiscapacidad;
-    private Boolean victimaConflicto;
-    private Boolean habitanteDeCalle;
+    private String personaEnDiscapacidad;
+    private String victimaConflicto;
+    private String habitanteDeCalle;
     
     Comedor comedor = new Comedor();
     Zona zona = new Zona();
@@ -28,7 +28,7 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(int Id, String cedula, String nombre, String apellido, String direccion, String movil, int numeroSisben) {
+    public Persona(int Id, int cedula, String nombre, String apellido, String direccion, String movil, int numeroSisben) {
         this.Id = Id;
         this.cedula = cedula;
         this.nombre = nombre;
@@ -46,11 +46,11 @@ public class Persona {
         this.Id = Id;
     }
 
-    public String getCedula() {
+    public int getCedula() {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
+    public void setCedula(int cedula) {
         this.cedula = cedula;
     }
 
@@ -110,27 +110,27 @@ public class Persona {
         this.zona = zona;
     }
 
-    public Boolean getPersonaEnDiscapacidad() {
+    public String getPersonaEnDiscapacidad() {
         return personaEnDiscapacidad;
     }
 
-    public void setPersonaEnDiscapacidad(Boolean personaEnDiscapacidad) {
+    public void setPersonaEnDiscapacidad(String personaEnDiscapacidad) {
         this.personaEnDiscapacidad = personaEnDiscapacidad;
     }
 
-    public Boolean getVictimaConflicto() {
+    public String getVictimaConflicto() {
         return victimaConflicto;
     }
 
-    public void setVictimaConflicto(Boolean victimaConflicto) {
+    public void setVictimaConflicto(String victimaConflicto) {
         this.victimaConflicto = victimaConflicto;
     }
 
-    public Boolean getHabitanteDeCalle() {
+    public String getHabitanteDeCalle() {
         return habitanteDeCalle;
     }
 
-    public void setHabitanteDeCalle(Boolean habitanteDeCalle) {
+    public void setHabitanteDeCalle(String habitanteDeCalle) {
         this.habitanteDeCalle = habitanteDeCalle;
     }
 

@@ -13,7 +13,7 @@ public class Comedor {
     private int Id;
     private String Nombre_comedor;
     private int capacidad_comedor;
-    Zona zona =new Zona();
+    Zona zona = new Zona();
 
     public Comedor() {
     }
