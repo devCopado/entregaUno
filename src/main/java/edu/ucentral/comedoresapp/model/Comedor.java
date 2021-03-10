@@ -14,7 +14,8 @@ public class Comedor {
     private String Nombre_comedor;
     private int capacidad_comedor;
     Zona zona = new Zona();
-
+    Horario horario = new Horario();
+    
     public Comedor() {
     }
 
@@ -23,6 +24,8 @@ public class Comedor {
         this.Nombre_comedor = Nombre_comedor;
         this.capacidad_comedor = capacidad_comedor;
     }
+
+   
 
     public int getId() {
         return Id;
@@ -56,9 +59,17 @@ public class Comedor {
         this.zona = zona;
     }
 
+    public Horario getHorario() {
+        return horario;
+    }
+
+    public void setHorario(Horario horario) {
+        this.horario = horario;
+    }
+
     @Override
     public String toString() {
-        return "Comedor{" + "Id=" + Id + ", Nombre_comedor=" + Nombre_comedor + ", capacidad_comedor=" + capacidad_comedor + ", zona=" + zona + '}';
+        return "Comedor{" + "Id=" + Id + ", Nombre_comedor=" + Nombre_comedor + ", capacidad_comedor=" + capacidad_comedor + ", zona=" + zona + ", horario=" + horario + '}';
     }
     
     

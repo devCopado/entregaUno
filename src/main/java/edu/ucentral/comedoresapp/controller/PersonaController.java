@@ -2,7 +2,9 @@
 package edu.ucentral.comedoresapp.controller;
 
 import edu.ucentral.comedoresapp.model.Comedor;
+import edu.ucentral.comedoresapp.model.Zona;
 import edu.ucentral.comedoresapp.repository.ComedorJDBC;
+import edu.ucentral.comedoresapp.repository.ZonaJDBC;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
@@ -20,11 +22,14 @@ public class PersonaController extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        registroController regcontroler = new registroController();
         if (req.getParameter("accion") != null) {
              String accion = req.getParameter("accion");
              if(accion.equals("Registrar")){
                  try {
                      registrarPersona(req,resp);
+                    
+                     
                  } catch (SQLException ex) {
                      Logger.getLogger(PersonaController.class.getName()).log(Level.SEVERE, null, ex);
                  } catch (NoSuchMethodException ex) {
@@ -53,7 +58,13 @@ public class PersonaController extends HttpServlet{
     }
 
     private void registrarPersona(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException, NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+
+       List<Zona> zonas = ZonaJDBC.instancia().listarZonas();
+        req.setAttribute("listZonas", zonas);
+        //response.sendRedirect("registroController");
+        //request.getRequestDispatcher("WEB-INF/estudiantes/listaEstudiantes.jsp").forward(request, response);
         
+        req.setAttribute("listZonas", zonas);
         req.getRequestDispatcher("WEB-INF/comedores/registroPersona.jsp").forward(req, resp);
     }
     
