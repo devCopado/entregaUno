@@ -20,7 +20,7 @@ public class Persona {
     private int numeroSisben;
     private String personaEnDiscapacidad;
     private String victimaConflicto;
-    private String habitanteDeCalle;
+    private String habitanteDeCalle; 
     
     Comedor comedor = new Comedor();
     Zona zona = new Zona();
