@@ -66,13 +66,13 @@
             </div>
         </form>
         <form action="listarZonas" method = "get" class="col-lg-6 offset-lg-3">
-            Seleccione la zona mas cercana:&nbsp;
+            Seleccione la zona más cercana:&nbsp;
             <select name="Zonas">
                 <c:forEach items="${listZonas}" var="zona">
                     <option value="${zona.id}">${zona.nombreZona}</option>
                 </c:forEach>
             </select>
-            
+        <input type="submit" name="accion" value="vercomedores">
         </form>
         <div class="progress" width="600px">
             <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">2%</div>

@@ -20,19 +20,15 @@ import java.util.Properties;
  */
 public class Conexion {
 
-    private static String JDBC_DRIVER = "org.postgresql.Driver";//"org.apache.derby.jdbc.ClientDriver"; //"org.postgresql.Driver";  //"com.mysql.jdbc.Driver";
+    private static String JDBC_DRIVER = "org.apache.derby.jdbc.ClientDriver"; //"org.postgresql.Driver";  //"com.mysql.jdbc.Driver";
     private static String DB = "comedoresDB";
-    private static String JDBC_URL = "jdbc:postgresql://localhost:5432/" + DB;//"jdbc:derby://localhost:1527/" +DB ;//"jdbc:postgresql://localhost:5432/"+ DB;  //"jdbc:mysql://localhost:3306/+DB;
-    private static String JDBC_USER = "postgres";  //"root";
-    private static String JDBC_PASS = "Andes2021";
+    private static String JDBC_URL = "jdbc:derby://localhost:1527/" + DB;//"jdbc:derby://localhost:1527/" +DB ;//"jdbc:postgresql://localhost:5432/"+ DB;  //"jdbc:mysql://localhost:3306/+DB;
+    private static String JDBC_USER = "comedor";  //"root";
+    private static String JDBC_PASS = "comedor";
     private static Driver driver;
 
     public static synchronized Connection getConnection() throws SQLException, NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
-        Properties props = new Properties();
-        props.setProperty("user", "postgres");
-        props.setProperty("password", "Andes2021");
-        props.setProperty("ssl", "true");
 
         if (driver == null) {
             try {
@@ -45,8 +41,8 @@ public class Conexion {
                 System.out.println("Fallo en cargar el Driver");
             }
         }
-        //return DriverManager.getConnection(JDBC_URL,JDBC_USER, JDBC_PASS);
-        return DriverManager.getConnection(JDBC_URL, props);
+        return DriverManager.getConnection(JDBC_URL,JDBC_USER, JDBC_PASS);
+        //return DriverManager.getConnection(JDBC_URL, props);
     }
 
     public static void closed(ResultSet rs) {

@@ -33,7 +33,7 @@ public class ZonaJDBC {
         return zonaJDBC;
     }
 
-    private final String SQL_SELECT = "SELECT * FROM public.zonas";
+    private final String SQL_SELECT = "SELECT * FROM APP.ZONAS order by NOMBREZONA ASC ";
 
     public List<Zona> listarZonas() throws SQLException, NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         Connection conn = null;
