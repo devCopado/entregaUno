@@ -44,6 +44,9 @@ public class PersonaController extends HttpServlet{
                      Logger.getLogger(PersonaController.class.getName()).log(Level.SEVERE, null, ex);
                  }
              }
+             if(accion.equals("ver comedores")){
+                  buscarComedoresXZona(req,resp);
+             }
         }
     }
 
@@ -66,6 +69,10 @@ public class PersonaController extends HttpServlet{
         
         req.setAttribute("listZonas", zonas);
         req.getRequestDispatcher("WEB-INF/comedores/registroPersona.jsp").forward(req, resp);
+    }
+
+    private void buscarComedoresXZona(HttpServletRequest req, HttpServletResponse resp) {
+        System.out.print("req---->"+req);
     }
     
     

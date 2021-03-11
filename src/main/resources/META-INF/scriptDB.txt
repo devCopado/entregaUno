@@ -1,0 +1,85 @@
+CREATE TABLE zonas (
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    nombrezona character varying(240),
+    ciudad character varying(230),
+    direccionzona character varying(230),
+    codigo_zona smallint,
+	PRIMARY KEY (Id)
+);
+
+
+CREATE TABLE personas (
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    cedula integer,
+    nombre character varying(255),
+    apellido character varying(255),
+    direccion character varying(255),
+    movil character varying(255),
+    numerosisben integer,
+    personaendiscapacidad character varying(255),
+    victimaconflicto character varying(255),
+    habitantedecalle character varying(255),
+    zona_persona integer,
+	PRIMARY KEY (Id)
+);
+
+
+
+CREATE TABLE comedores (
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+    nombre_comedor character varying(240),
+    capacidad_comedor character varying(230),
+    zona_comedor integer NOT NULL,
+	PRIMARY KEY (Id)
+);
+
+
+ALTER TABLE ONLY comedores
+    ADD CONSTRAINT fk_zona_codigo FOREIGN KEY (zona_comedor) REFERENCES zonas(id);
+	
+	ALTER TABLE  personas
+    ADD CONSTRAINT fkey_zona FOREIGN KEY (zona_persona) REFERENCES public.zonas(id);
+	
+
+//////////////////
+
+INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Usaquén', 'bogota');
+INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Chapinero', 'bogota');
+INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Santa Fe', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('San Cristóbal', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Usme', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Tunjuelito', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Bosa', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Kennedy', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Fontibón', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Engativá', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Suba', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Barrios Unidos', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Teusaquillo', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Los Mártires', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Antonio Nariño', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Puente Aranda', 'bogota');
+  INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('La Candelaria', 'bogota');
+    INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Rafael Uribe Uribe', 'bogota');
+    INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Ciudad Bolívar', 'bogota');
+    INSERT INTO zonas (nombrezona, ciudad)
+  VALUES ('Sumapaz', 'bogota');

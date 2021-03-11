@@ -15,6 +15,8 @@ public class Comedor {
     private int capacidad_comedor;
     Zona zona = new Zona();
     Horario horario = new Horario();
+    // hora inicio
+    // hora fin
     
     public Comedor() {
     }

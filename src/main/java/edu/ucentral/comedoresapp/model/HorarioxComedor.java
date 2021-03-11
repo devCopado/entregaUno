@@ -11,9 +11,14 @@ package edu.ucentral.comedoresapp.model;
  */
 public class HorarioxComedor {
     private int Id;
-    Horario horario = new Horario();
+    //Horario horario = new Horario();
     Comedor comedor = new Comedor();
     Persona persona = new Persona();
+    
+    // hora inicio int
+    // fecha reserva = today
+    
+    
 
     public HorarioxComedor() {
     }
@@ -30,14 +35,7 @@ public class HorarioxComedor {
         this.Id = Id;
     }
 
-    public Horario getHorario() {
-        return horario;
-    }
-
-    public void setHorario(Horario horario) {
-        this.horario = horario;
-    }
-
+   
     public Comedor getComedor() {
         return comedor;
     }
@@ -56,7 +54,7 @@ public class HorarioxComedor {
 
     @Override
     public String toString() {
-        return "HorarioxComedor{" + "Id=" + Id + ", horario=" + horario + ", comedor=" + comedor + ", persona=" + persona + '}';
+        return "HorarioxComedor{" + "Id=" + Id  + ", comedor=" + comedor + ", persona=" + persona + '}';
     }
     
     
