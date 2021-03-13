@@ -28,7 +28,7 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(int Id, int cedula, String nombre, String apellido, String direccion, String movil, int numeroSisben) {
+    public Persona(int Id, int cedula, String nombre, String apellido, String direccion, String movil, int numeroSisben, String personaEnDiscapacidad, String victimaConflicto, String habitanteDeCalle, Zona zona) {
         this.Id = Id;
         this.cedula = cedula;
         this.nombre = nombre;
@@ -36,7 +36,29 @@ public class Persona {
         this.direccion = direccion;
         this.movil = movil;
         this.numeroSisben = numeroSisben;
+        this.personaEnDiscapacidad = personaEnDiscapacidad;
+        this.victimaConflicto = victimaConflicto;
+        this.habitanteDeCalle = habitanteDeCalle;
+        this.zona = zona;
     }
+    
+    
+    
+    public Persona(int cedula, String nombre, String apellido, String direccion, String movil, int numeroSisben, String personaEnDiscapacidad, String victimaConflicto, String habitanteDeCalle , Zona zona ) {
+        
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.movil = movil;
+        this.numeroSisben = numeroSisben;
+        this.personaEnDiscapacidad = personaEnDiscapacidad;
+        this.victimaConflicto = victimaConflicto;
+        this.habitanteDeCalle = habitanteDeCalle;
+        this.zona = zona;
+    }
+
+    
 
     public int getId() {
         return Id;

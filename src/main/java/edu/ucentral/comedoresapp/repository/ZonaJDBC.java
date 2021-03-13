@@ -14,6 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import static jdk.nashorn.internal.runtime.Debug.id;
 
 /**
  *
@@ -59,5 +60,34 @@ public class ZonaJDBC {
         Conexion.closed(stm);
         Conexion.closed(rs);
         return listaZona;
+    }
+
+    private final String SQL_SELECT_ZONA_BY_ID = "SELECT * FROM APP.ZONAS WHERE id=?";
+
+    public Zona buscarZonaporId(int id) throws NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, SQLException {
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        Zona zona = null;
+        
+            conn = Conexion.getConnection();
+            stm = conn.prepareStatement(SQL_SELECT_ZONA_BY_ID);
+            stm.setInt(1, id);
+            System.out.println("stm"+stm);
+            rs = stm.executeQuery();
+            System.out.println(" rs => "+rs);
+            while (rs.next()) {
+                zona = new Zona();
+                zona.setId(rs.getInt(1));
+                zona.setNombreZona(rs.getString(2));
+               
+            }
+       
+            Conexion.closed(conn);
+            Conexion.closed(stm);
+            Conexion.closed(rs);
+       
+        
+        return zona;
     }
 }

@@ -61,6 +61,12 @@ public class Zona {
     public String toString() {
         return "Zona{" + "Id=" + Id + ", nombreZona=" + nombreZona + ", ciudad=" + ciudad + ", direccionZona=" + direccionZona + '}';
     }
+
+    public static class ZonaJDBC {
+
+        public ZonaJDBC() {
+        }
+    }
     
     
 }

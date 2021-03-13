@@ -11,23 +11,37 @@ package edu.ucentral.comedoresapp.model;
  */
 public class Comedor {
     private int Id;
-    private String Nombre_comedor;
+    private String nombre_Comedor;
     private int capacidad_comedor;
+    private int hora_inicio;
+    private int hora_fin;
+    private int cupo_disponible;
+    private double porcentajeOcupacion;
+    
     Zona zona = new Zona();
-    Horario horario = new Horario();
-    // hora inicio
-    // hora fin
     
     public Comedor() {
     }
 
-    public Comedor(int Id, String Nombre_comedor, int capacidad_comedor) {
+    public Comedor(int Id, String nombre_Comedor, int capacidad_comedor, int hora_inicio, int hora_fin, int cupo_disponible, double porcentajeOcupacion) {
         this.Id = Id;
-        this.Nombre_comedor = Nombre_comedor;
+        this.nombre_Comedor = nombre_Comedor;
         this.capacidad_comedor = capacidad_comedor;
+        this.hora_inicio = hora_inicio;
+        this.hora_fin = hora_fin;
+        this.cupo_disponible = cupo_disponible;
+        this.porcentajeOcupacion = porcentajeOcupacion;
     }
-
-   
+    
+    public Comedor( String nombre_Comedor, int capacidad_comedor, int hora_inicio, int hora_fin, int cupo_disponible, double porcentajeOcupacion) {
+        
+        this.nombre_Comedor = nombre_Comedor;
+        this.capacidad_comedor = capacidad_comedor;
+        this.hora_inicio = hora_inicio;
+        this.hora_fin = hora_fin;
+        this.cupo_disponible = cupo_disponible;
+        this.porcentajeOcupacion = porcentajeOcupacion;
+    }
 
     public int getId() {
         return Id;
@@ -37,12 +51,12 @@ public class Comedor {
         this.Id = Id;
     }
 
-    public String getNombre_comedor() {
-        return Nombre_comedor;
+    public String getNombre_Comedor() {
+        return nombre_Comedor;
     }
 
-    public void setNombre_comedor(String Nombre_comedor) {
-        this.Nombre_comedor = Nombre_comedor;
+    public void setNombre_Comedor(String nombre_Comedor) {
+        this.nombre_Comedor = nombre_Comedor;
     }
 
     public int getCapacidad_comedor() {
@@ -53,6 +67,38 @@ public class Comedor {
         this.capacidad_comedor = capacidad_comedor;
     }
 
+    public int getHora_inicio() {
+        return hora_inicio;
+    }
+
+    public void setHora_inicio(int hora_inicio) {
+        this.hora_inicio = hora_inicio;
+    }
+
+    public int getHora_fin() {
+        return hora_fin;
+    }
+
+    public void setHora_fin(int hora_fin) {
+        this.hora_fin = hora_fin;
+    }
+
+    public int getCupo_disponible() {
+        return cupo_disponible;
+    }
+
+    public void setCupo_disponible(int cupo_disponible) {
+        this.cupo_disponible = cupo_disponible;
+    }
+
+    public double getPorcentajeOcupacion() {
+        return porcentajeOcupacion;
+    }
+
+    public void setPorcentajeOcupacion(double porcentajeOcupacion) {
+        this.porcentajeOcupacion = porcentajeOcupacion;
+    }
+
     public Zona getZona() {
         return zona;
     }
@@ -61,18 +107,22 @@ public class Comedor {
         this.zona = zona;
     }
 
-    public Horario getHorario() {
-        return horario;
-    }
-
-    public void setHorario(Horario horario) {
-        this.horario = horario;
-    }
-
     @Override
     public String toString() {
-        return "Comedor{" + "Id=" + Id + ", Nombre_comedor=" + Nombre_comedor + ", capacidad_comedor=" + capacidad_comedor + ", zona=" + zona + ", horario=" + horario + '}';
+        return "Comedor{" + "Id=" + Id + ", nombre_Comedor=" + nombre_Comedor + ", capacidad_comedor=" + capacidad_comedor + ", hora_inicio=" + hora_inicio + ", hora_fin=" + hora_fin + ", cupo_disponible=" + cupo_disponible + ", porcentajeOcupacion=" + porcentajeOcupacion + ", zona=" + zona + '}';
     }
+    
+    
+
+    
+
+    
+
+    
+    
+
+    
+   
     
     
 }

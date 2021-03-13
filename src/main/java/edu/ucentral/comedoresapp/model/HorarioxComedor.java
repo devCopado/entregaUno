@@ -5,27 +5,43 @@
  */
 package edu.ucentral.comedoresapp.model;
 
+import java.sql.Date;
+import java.time.LocalDateTime;
+
 /**
  *
  * @author CORE I9 RX 5700XT
  */
 public class HorarioxComedor {
+    
     private int Id;
-    //Horario horario = new Horario();
+    private LocalDateTime fecha_reserva; // today
     Comedor comedor = new Comedor();
     Persona persona = new Persona();
-    
-    // hora inicio int
-    // fecha reserva = today
-    
-    
 
     public HorarioxComedor() {
     }
 
+    public HorarioxComedor(int Id, LocalDateTime fecha_reserva) {
+        this.Id = Id;
+       
+        this.fecha_reserva = fecha_reserva;
+    }
+    
+    public HorarioxComedor( LocalDateTime fecha_reserva ,Comedor comedor,Persona persona) {
+ 
+        this.fecha_reserva = fecha_reserva;
+        this.comedor = comedor;
+        this.persona = persona;
+    }
+    
+    
+    
     public HorarioxComedor(int Id) {
         this.Id = Id;
     }
+
+    
 
     public int getId() {
         return Id;
@@ -52,10 +68,23 @@ public class HorarioxComedor {
         this.persona = persona;
     }
 
+    
+
+    public LocalDateTime getFecha_reserva() {
+        return fecha_reserva;
+    }
+
+    public void setFecha_reserva(LocalDateTime fecha_reserva) {
+        this.fecha_reserva = fecha_reserva;
+    }
+
     @Override
     public String toString() {
-        return "HorarioxComedor{" + "Id=" + Id  + ", comedor=" + comedor + ", persona=" + persona + '}';
+        return "HorarioxComedor{" + "Id=" + Id + ", comedor=" + comedor + ", persona=" + persona + ", fecha_reserva=" + fecha_reserva + '}';
     }
+
+    
+   
     
     
 }
